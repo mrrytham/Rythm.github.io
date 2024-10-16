@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff4d4d;
+            padding: 10px;
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .burger {
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #ff4d4d;
+            width: 100%;
+        }
+        .nav-links a {
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav-links a:hover {
+            background-color: #ff6666;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff4d4d;
+            text-align: center;
+           
+        }
+        @media (min-width: 600px) {
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background-color: transparent;
+            }
+            .nav-links a {
+                padding: 15px 20px;
+            }
+            .burger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="burger" onclick="toggleNav()">☰</div>
+            <div class="nav-links" id="navLinks">
+                <a href="Poem.html">Poem</a>
+                <a href="Story.html">Story</a>
+                <a href="Conversation.html">Conversation</a>
+                <a href="Incomplete.html">Incomplete</a>
+            </div>
+        </div>
+    </header>
+    <div class="profile">
+        <img src="Rythm.jpg" alt="Rythm Basyal">
+        <p><b>Rythm Basyal </b>is a class 11 student studying in Manimukunda SS/College in Butwal. Rythm is originally from Malunga, Galyang-3, Syangja. But currently he is in Butwal.</p>
+    </div>
+    <div class="content">
+        <h2>Lyric Poem</h2>
+        <p>A lyric poem is a type of emotional song-like poetry, distinguished from dramatic and narrative poetry. It expresses personal feelings and thoughts, often in a musical manner.</p>
+        <h2>Story</h2>
+        <p>A story is a narrative, either true or fictitious, that is designed to entertain, inform, or convey a message. It often includes characters, a setting, and a plot.</p>
+        <h2>Conversation</h2>
+        <p>Conversation is a form of interactive, spontaneous communication between two or more people. It is a fundamental aspect of human interaction and socialization.</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/share/m4jftRYn7aHhka5U/"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+        <a href="https://www.instagram.com/basyalrythm/profilecard/?igsh=MWxqdnI4eGhpazgxbQ=="><i class="fa fa-instagram"></i> Instagram</a>
+        <a href="Rythm"><i class="fa fa-x"></i> X</a>
+    </div>
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
